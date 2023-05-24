@@ -11,9 +11,11 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.AfterTest;
 
 public class Utility_Common_Function 
 {
+	@AfterTest
 	public static void evidenceFileCreator(String fileName, String requestBody, String responseBody) throws IOException 
 	{
 		File newfile=new File("C:\\Users\\hp\\Desktop\\testing\\rest assured\\" +fileName+".txt");

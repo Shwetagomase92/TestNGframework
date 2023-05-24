@@ -3,6 +3,7 @@ package testClassPackage;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import commonFunctionPackage.API_Common_Functions;
 import commonFunctionPackage.Utility_Common_Function;
 import io.restassured.path.json.JsonPath;
@@ -10,6 +11,7 @@ import requestRepositoryPackage.Post_Req_Repository;
 
 public class Post_TC1 
 {	
+	@Test
 	public static void execute() throws IOException 
 	{
 		for(int i=0;i<5;i++)
@@ -25,12 +27,10 @@ public class Post_TC1
 				break;
 			}
 			else
-			{
-				System.out.println("correct status code is not found hence retrying the API");
+			{ System.out.println("correct status code is not found hence retrying the API");
 			}
 		}		
-	}
-	
+	}	
 	public static void validator(String responseBody, int statusCode) throws IOException
 	{
 		JsonPath jspRes=new JsonPath(responseBody);

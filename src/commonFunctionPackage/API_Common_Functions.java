@@ -1,11 +1,12 @@
 package commonFunctionPackage;
 
 import static io.restassured.RestAssured.given;
+import org.testng.annotations.BeforeTest;
 import io.restassured.RestAssured;
 
 public class API_Common_Functions 
 {
-	
+	@BeforeTest
 	public static int response_statusCode(String baseURI, String resource, String requestBody) 
 	{
 		RestAssured.baseURI=baseURI;

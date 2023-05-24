@@ -3,6 +3,8 @@ package testClassPackage;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import commonFunctionPackage.API_Common_Functions;
 import commonFunctionPackage.Utility_Common_Function;
 import io.restassured.path.json.JsonPath;
@@ -10,6 +12,7 @@ import requestRepositoryPackage.Post_Req_Repository;
 
 public class Post_TC3 
 {
+	@Test
 	public static void execute() throws IOException 
 	{
 		for(int i=0;i<5;i++)
